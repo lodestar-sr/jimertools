@@ -1,0 +1,82 @@
+{
+  "name": "chatroom",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "cross-env NODE_ENV=production vite build",
+    "format": "pretty-quick",
+    "start": "vite --port 9000 --open",
+    "theme-viewer": "tailwind-config-viewer -o",
+    "vite": "vite",
+    "postinstall": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue,ts,tsx}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.9.1",
+    "@saeris/vue-spinners": "^1.0.8",
+    "@types/d3": "^6.3.0",
+    "@types/overlayscrollbars": "^1.12.0",
+    "@types/vue-feather-icons": "^5.0.1",
+    "@vee-validate/rules": "^4.1.20",
+    "axios": "^0.21.1",
+    "classnames": "^2.3.1",
+    "core-js": "^3.9.1",
+    "cropperjs": "^1.5.11",
+    "cssnano": "^4.1.10",
+    "d3": "^6.6.2",
+    "date-fns": "^2.19.0",
+    "feather-icons": "^4.28.0",
+    "fuse.js": "^6.4.6",
+    "keycloak-js": "^12.0.4",
+    "moment": "^2.25.0",
+    "overlayscrollbars": "^1.13.1",
+    "postcss": "^8.2.9",
+    "register-service-worker": "^1.7.2",
+    "socket.io-client": "^4.5.1",
+    "vee-validate": "^4.0.0",
+    "velocity-animate": "^1.5.2",
+    "vue": "^3.0.0",
+    "vue-next-heroicons": "^1.0.1",
+    "vue-router": "^4.0.0-0",
+    "vue-toastification": "^2.0.0-rc.1",
+    "vuex": "^4.0.0-0"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^12.0.1",
+    "@intlify/vite-plugin-vue-i18n": "^2.0.4",
+    "@tailwindcss/jit": "^0.1.17",
+    "@types/node": "^14.14.37",
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@typescript-eslint/parser": "^4.20.0",
+    "@vitejs/plugin-vue": "^1.2.0",
+    "@vue/compiler-sfc": "^3.0.9",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "autoprefixer": "^10.2.5",
+    "commitlint": "^12.0.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.23.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.8.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0",
+    "tailwind-config-viewer": "^1.5.1",
+    "tailwindcss": "^2.0.4",
+    "typescript": "~4.2.3",
+    "vite": "^2.1.4",
+    "vue-i18n": "^9.0.0"
+  }
+}
